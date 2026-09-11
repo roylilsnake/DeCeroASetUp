@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -7,10 +7,7 @@
 
 <!-- =========================================================================
      ETIQUETAS META / SEO & METADATOS PARA REDES SOCIALES (OPEN GRAPH & TWITTER)
-     =========================================================================
-     Permiten que al compartir el enlace en WhatsApp, Facebook, Telegram, etc., 
-     aparezca la tarjeta con el título, descripción y la imagen del logo oficial.
--->
+     ========================================================================= -->
 <meta name="description" content="Hardware y Tecnología en Cuba: Review de Componentes, Ingresos Digitales, Finanzas y Compras Online.">
 <meta name="keywords" content="De Cero A SetUp,el mundo del hardware y la tecnología en Cuba">
 <meta name="author" content="Roy - LilSnake">
@@ -19,19 +16,19 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="De Cero A SetUp — Tecnología y Hardware en Cuba">
 <meta property="og:description" content="Builds sin humo, reviews reales y finanzas al estilo cubano. Arma tu setup desde cero y con cabeza según tus necesidades.">
-<meta property="og:image" content="D0ASetUp Perfil.png">
+<meta property="og:image" content="Assets/D0ASetUp Perfil.png">
 <meta property="og:locale" content="es_CU">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="De Cero A SetUp — Tecnología y Hardware en Cuba">
 <meta name="twitter:description" content="Builds sin humo, reviews reales y finanzas al estilo cubano. Arma tu setup desde cero según tus necesidades.">
-<meta name="twitter:image" content="D0ASetUp Perfil.png">
+<meta name="twitter:image" content="Assets/D0ASetUp Perfil.png">
 
 <!-- Favicon SVG dinámico con los colores de marca -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,8 92,88 8,88' fill='none' stroke='%23ffd84d' stroke-width='8'/%3E%3Cpolygon points='50,92 8,12 92,12' fill='%23e14fd2' opacity='0.85'/%3E%3C/svg%3E">
 
-<!-- Fuentes tipográficas externas desde Google Fonts / CDN JSDelivr -->
+<!-- Fuentes tipográficas externas -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/anton@latest/latin-400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/manrope@latest/latin-400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/manrope@latest/latin-600.css">
@@ -41,7 +38,6 @@
      ESTILOS CSS PRINCIPALES
      ========================================================================= -->
 <style>
-/* 1. Variables de colores globales (Fácil de editar si quieres cambiar algún tono) */
 :root{
   --mag:#b026c9; 
   --vio:#6a0ded; 
@@ -57,7 +53,6 @@
   --txt:#f4ecff;
 }
 
-/* 2. Reseteo general y scroll suave */
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
@@ -68,11 +63,9 @@ body{
   overflow-x:hidden;
 }
 
-/* Canvas del fondo interactivo */
 #waves{position:fixed;inset:0;z-index:0;pointer-events:none}
 .page{position:relative;z-index:1}
 
-/* 3. Header y Navegación */
 header{
   position:sticky;top:0;z-index:40;
   backdrop-filter:blur(14px);
@@ -90,10 +83,8 @@ header{
 .nav nav a:hover{color:#fff}
 .nav nav a:hover::after{width:100%}
 
-/* Botón de menú hamburguesa (Móviles) */
 .burger{display:none;margin-left:auto;background:none;border:1px solid var(--line);border-radius:10px;padding:.45rem .6rem;color:var(--neon);font-size:1.2rem;cursor:pointer}
 
-/* 4. Sección Hero (Bienvenida) */
 .hero{max-width:1200px;margin:auto;padding:4.5rem 1.4rem 3rem}
 .hero-panel{
   position:relative;transform:skewX(-9deg);
@@ -125,7 +116,6 @@ header{
   padding:.42rem .95rem;border-radius:999px;background:rgba(168,255,96,.08);text-transform:uppercase;transition:.25s}
 .chip:hover{background:var(--neon);color:var(--deep);box-shadow:0 0 22px rgba(168,255,96,.6)}
 
-/* Botones Principales (CTA) */
 .cta-row{display:flex;flex-wrap:wrap;gap:1rem}
 .btn{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;border-radius:14px;padding:.9rem 1.5rem;transition:.25s;border:none;cursor:pointer;font-size:1rem}
 .btn svg{width:20px;height:20px}
@@ -136,7 +126,6 @@ header{
 .btn-sun{background:linear-gradient(135deg,var(--yel),var(--ora));color:#3a1200;box-shadow:0 8px 26px rgba(255,154,61,.35)}
 .btn-sun:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(255,154,61,.5)}
 
-/* 5. Cinta Marquesina Animada */
 .marquee{overflow:hidden;border-block:1px solid var(--line);background:rgba(27,6,58,.4);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .mq-track{display:flex;width:max-content;animation:scroll 26s linear infinite}
 .mq-group{display:flex;align-items:center;gap:2.6rem;padding:.85rem 1.3rem .85rem 2.6rem}
@@ -145,7 +134,6 @@ header{
 
 @keyframes scroll{to{transform:translateX(-50%)}}
 
-/* 6. Secciones Generales */
 section{max-width:1200px;margin:auto;padding:4.5rem 1.4rem}
 .sec-head{text-align:center;margin-bottom:2.8rem}
 .sec-head h2{font-family:'Anton',sans-serif;font-size:clamp(2rem,4.5vw,3rem);color:#fff;text-shadow:0 0 18px rgba(168,255,96,.55);letter-spacing:.03em}
@@ -153,7 +141,6 @@ section{max-width:1200px;margin:auto;padding:4.5rem 1.4rem}
 .sec-head p{color:#e6d6ff;margin-top:.7rem;max-width:60ch;margin-inline:auto;line-height:1.6}
 .sec-head .bar{width:90px;height:4px;margin:1.1rem auto 0;border-radius:4px;background:linear-gradient(90deg,var(--yel),var(--pink));box-shadow:0 0 14px rgba(255,216,77,.7)}
 
-/* Tarjetas de Contenido */
 .grid-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.3rem}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:1.7rem 1.4rem;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:.3s;position:relative;overflow:hidden}
 .card::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,216,77,.14),rgba(225,79,210,.14));opacity:0;transition:.3s}
@@ -164,7 +151,7 @@ section{max-width:1200px;margin:auto;padding:4.5rem 1.4rem}
 .card h3{font-family:'Anton',sans-serif;color:var(--neon);letter-spacing:.05em;font-size:1.12rem;margin-bottom:.6rem;text-transform:uppercase}
 .card p{font-size:.93rem;line-height:1.6;color:#e9dcff}
 
-/* 7. Sección Donaciones / Métodos de Pago */
+/* Secciones de Pago y QR */
 .donate-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:2rem;align-items:start}
 .pay-card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:1.6rem;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:1.2rem;transition:.3s}
 .pay-card:hover{border-color:rgba(255,216,77,.6);box-shadow:0 14px 36px rgba(20,0,50,.4)}
@@ -173,24 +160,28 @@ section{max-width:1200px;margin:auto;padding:4.5rem 1.4rem}
 .pay-top .ico svg{width:24px;height:24px;stroke:var(--yel);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .pay-top h3{font-family:'Anton',sans-serif;color:#fff;letter-spacing:.05em;font-size:1.15rem}
 .pay-top small{display:block;color:var(--neon-soft);font-weight:600;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
-.data-row{display:flex;align-items:center;gap:.8rem;background:rgba(27,6,58,.55);border:1px dashed rgba(168,255,96,.5);border-radius:12px;padding:.75rem 1rem;margin-bottom:.7rem}
+
+/* Ajustes para datos en una sola línea */
+.data-row{display:flex;align-items:center;justify-content:space-between;gap:.5rem;background:rgba(27,6,58,.55);border:1px dashed rgba(168,255,96,.5);border-radius:12px;padding:.65rem .85rem;margin-bottom:.7rem}
 .data-row:last-of-type{margin-bottom:0}
-.data-row code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--neon);font-size:1rem;letter-spacing:.04em;flex:1;word-break:break-all}
-.copy-btn{background:linear-gradient(135deg,var(--neon),#7ef05a);color:var(--deep);border:none;border-radius:999px;padding:.5rem 1rem;font-weight:800;font-size:.8rem;cursor:pointer;display:inline-flex;align-items:center;gap:.4rem;transition:.2s;flex:none}
-.copy-btn:hover{transform:scale(1.06)}
-.copy-btn svg{width:14px;height:14px;stroke:var(--deep);fill:none;stroke-width:2}
+.data-row code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--neon);font-size:clamp(.78rem,2.8vw,.95rem);letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.copy-btn{background:linear-gradient(135deg,var(--neon),#7ef05a);color:var(--deep);border:none;border-radius:50%;width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s;flex:none}
+.copy-btn:hover{transform:scale(1.1)}
+.copy-btn svg{width:16px;height:16px;stroke:var(--deep);fill:none;stroke-width:2}
 .pay-note{margin-top:.8rem;font-size:.86rem;color:#dcc8ff;line-height:1.55}
 
-/* QR EnZona */
-.enzona-grid{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:center}
-.qr-box{background:#fff;border-radius:16px;padding:10px;width:172px;box-shadow:0 0 30px rgba(168,255,96,.35),0 10px 26px rgba(20,0,50,.4);display:grid;place-items:center}
-.qr-box img{width:100%;height:auto;display:block;border-radius:6px}
-#qrGen{display:none;width:152px;height:152px}
-#qrGen img,#qrGen canvas{border-radius:6px}
-.qr-cap{margin-top:.6rem;text-align:center;color:var(--neon);font-weight:800;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
+/* Grid del QR */
+.qr-grid{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:center}
+.qr-box{background:#fff;border-radius:16px;padding:8px;width:150px;box-shadow:0 0 25px rgba(168,255,96,.3);display:flex;flex-direction:column;align-items:center}
+.qr-box img{width:100%;height:auto;display:block;border-radius:8px}
+.qr-cap{margin-top:.5rem;text-align:center;color:var(--neon);font-weight:800;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
 .qr-col{display:flex;flex-direction:column;align-items:center}
 
-/* Pasos de Donación */
+/* Botón descargar QR */
+.btn-dl{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;margin-top:.6rem;width:100%;padding:.45rem .6rem;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);border-radius:8px;color:#fff;font-size:.75rem;font-weight:700;text-decoration:none;transition:.2s}
+.btn-dl:hover{background:rgba(255,255,255,.25);border-color:var(--neon);color:var(--neon)}
+.btn-dl svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
+
 .steps{background:linear-gradient(135deg,rgba(124,31,240,.55),rgba(225,79,210,.35));border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:1.8rem;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .steps h3{font-family:'Anton',sans-serif;color:var(--neon);letter-spacing:.06em;font-size:1.25rem;margin-bottom:1.2rem;text-transform:uppercase}
 .steps ol{list-style:none;counter-reset:p}
@@ -199,7 +190,6 @@ section{max-width:1200px;margin:auto;padding:4.5rem 1.4rem}
 .steps .heart{color:var(--pink)}
 .mini-cta{margin-top:1.4rem;display:flex;gap:.8rem;flex-wrap:wrap}
 
-/* 8. Sección Redes / Contacto */
 .social-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.3rem}
 .social{display:flex;align-items:center;gap:1rem;text-decoration:none;color:#fff;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.25rem 1.3rem;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:.3s;position:relative;overflow:hidden}
 .social::after{content:"→";position:absolute;right:1.2rem;color:var(--neon);font-weight:800;transition:.3s;opacity:.6}
@@ -211,17 +201,16 @@ section{max-width:1200px;margin:auto;padding:4.5rem 1.4rem}
 .social.ig .s-ico{background:linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7)}
 .social.wa .s-ico{background:linear-gradient(135deg,#25d366,#128c7e)}
 .social.yt .s-ico{background:linear-gradient(135deg,#ff0033,#b30024)}
+.social.tg .s-ico{background:linear-gradient(135deg,#2f80ed,#0088cc)}
 .social.mail .s-ico{background:linear-gradient(135deg,var(--yel),var(--ora))}
 .social b{display:block;font-family:'Anton',sans-serif;letter-spacing:.05em;font-size:1.05rem}
 .social small{color:var(--neon-soft);font-size:.8rem;font-weight:600;letter-spacing:.05em;word-break:break-all}
 
-/* 9. Footer */
 footer{border-top:1px solid var(--line);background:rgba(27,6,58,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);margin-top:2rem}
 .foot{max-width:1200px;margin:auto;padding:2.2rem 1.4rem;display:flex;flex-wrap:wrap;gap:1.2rem;align-items:center;justify-content:space-between}
 .foot p{color:#d9c6ff;font-size:.9rem}
 .foot .brand b{font-size:1.1rem}
 
-/* 10. WhatsApp flotante */
 .wa-float{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#25d366,#128c7e);box-shadow:0 10px 28px rgba(0,0,0,.4);transition:.25s}
 .wa-float svg{width:30px;height:30px;fill:#fff}
 .wa-float:hover{transform:scale(1.1) rotate(6deg)}
@@ -229,15 +218,12 @@ footer{border-top:1px solid var(--line);background:rgba(27,6,58,.55);backdrop-fi
 
 @keyframes pulse{0%{transform:scale(1);opacity:1}100%{transform:scale(1.55);opacity:0}}
 
-/* 11. Notificación Toast al copiar */
 #toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,80px);z-index:70;background:var(--deep);color:var(--neon);border:1px solid rgba(168,255,96,.6);border-radius:12px;padding:.8rem 1.4rem;font-weight:800;letter-spacing:.04em;box-shadow:0 0 30px rgba(168,255,96,.35);transition:transform .35s;pointer-events:none}
 #toast.show{transform:translate(-50%,0)}
 
-/* 12. Animación de revelación al scroll */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:none}
 
-/* 13. Adaptación Responsive (Smartphones y Tablets) */
 @media(max-width:960px){
   .hero-inner{grid-template-columns:1fr;gap:2.2rem}
   .frame{max-width:340px;margin:auto}
@@ -250,14 +236,13 @@ footer{border-top:1px solid var(--line);background:rgba(27,6,58,.55);backdrop-fi
   .burger{display:block}
   .hero-panel{transform:none;padding:2rem 1.4rem}
   .hero-inner{transform:none}
-  .enzona-grid{grid-template-columns:1fr;justify-items:center}
-  .enzona-grid .data-row{width:100%}
+  .qr-grid{grid-template-columns:1fr;justify-items:center}
+  .qr-grid .data-row{width:100%}
 }
 </style>
 </head>
 <body>
 
-<!-- Canvas sobre el que se dibujan las ondas neón en JS -->
 <canvas id="waves"></canvas>
 
 <div class="page">
@@ -292,14 +277,14 @@ footer{border-top:1px solid var(--line);background:rgba(27,6,58,.55);backdrop-fi
 <!-- ============ HERO (PRESENTACIÓN) ============ -->
 <section class="hero" id="inicio">
   <div class="hero-panel">
-    <!-- Figuras decorativas de fondo -->
     <svg class="tri" style="top:8%;left:38%;width:70px" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e14fd2" stroke-width="4"/></svg>
     <svg class="tri" style="bottom:12%;left:55%;width:46px;transform:rotate(28deg)" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e14fd2" stroke-width="4"/></svg>
     <svg class="tri" style="top:20%;right:6%;width:90px;transform:rotate(-14deg)" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#e14fd2" stroke-width="4"/></svg>
     
     <div class="hero-inner">
       <div class="frame reveal visible">
-        <img src="https://image.qwenlm.ai/public_source/b4e44411-643e-41b9-9f92-8eb22c86617f/1a48e581c-ee19-48e2-a82d-b9a71d8ea8e2.png" alt="Avatar del canal De Cero A SetUp">
+        <!-- Imagen de perfil cambiada a Assets/Snake Perfil.png -->
+        <img src="Assets/Snake Perfil.png" alt="Avatar oficial de Snake - De Cero A SetUp">
         <span class="spark s1">✦</span><span class="spark s2">✦</span><span class="spark s3">✦</span>
       </div>
       <div>
@@ -390,45 +375,60 @@ footer{border-top:1px solid var(--line);background:rgba(27,6,58,.55);backdrop-fi
   <div class="donate-wrap">
     <div class="reveal">
       
-      <!-- Transfermóvil (Datos actualizados con Tarjeta de Banco) -->
+      <!-- Transfermóvil con QR y Botón de Descargar -->
       <div class="pay-card">
         <div class="pay-top">
           <div class="ico"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/><path d="M17.5 8c1.2 1.2 1.2 3.8 0 5M20 6c2.2 2.2 2.2 6.8 0 9"/></svg></div>
-          <div><h3>Transfermóvil</h3><small>Transferencia directa</small></div>
+          <div><h3>Transfermóvil</h3><small>Transferencia o QR</small></div>
         </div>
-        <div class="data-row">
-          <code>9205-1299-7821-8221</code>
-          <!-- Al copiar, guarda la cadena limpia sin guiones para que Transfermóvil la acepte directo -->
-          <button class="copy-btn" data-copy="9205129978218221"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copiar</button>
+        <div class="qr-grid">
+          <div class="qr-col">
+            <div class="qr-box">
+              <img src="Assets/QR Transfermovil.jpg" alt="QR oficial Transfermóvil" loading="lazy">
+              <a href="Assets/QR Transfermovil.jpg" download="QR_Transfermovil_D0ASetUp.jpg" class="btn-dl" title="Guardar QR Transfermóvil">
+                <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Guardar QR
+              </a>
+            </div>
+            <span class="qr-cap">Escanea con la app</span>
+          </div>
+          <div>
+            <div class="data-row">
+              <code>9205-1299-7821-8221</code>
+              <button class="copy-btn" data-copy="9205129978218221" title="Copiar Tarjeta"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
+            </div>
+            <p class="pay-note">Copia el número para transferir directo a mi tarjeta bancaria oficial o escanea el QR.</p>
+          </div>
         </div>
-        <p class="pay-note">Copia el número para transferir a mi tarjeta bancaria oficial.</p>
       </div>
 
-      <!-- EnZona -->
+      <!-- EnZona con QR y Botón de Descargar -->
       <div class="pay-card">
         <div class="pay-top">
           <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM19 19h2v2h-2zM14 20h2M20 14h1"/></svg></div>
           <div><h3>EnZona</h3><small>QR o Transferencia</small></div>
         </div>
-        <div class="enzona-grid">
+        <div class="qr-grid">
           <div class="qr-col">
             <div class="qr-box">
-              <img id="qrImg" src="qr-enzona.png" alt="QR oficial de mi cuenta EnZona" loading="lazy" onerror="activarQRRespaldo()">
-              <div id="qrGen" aria-hidden="true"></div>
+              <img src="Assets/QR EnZona.jpg" alt="QR oficial EnZona" loading="lazy">
+              <a href="Assets/QR EnZona.jpg" download="QR_EnZona_D0ASetUp.jpg" class="btn-dl" title="Guardar QR EnZona">
+                <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Guardar QR
+              </a>
             </div>
             <span class="qr-cap">Escanea con EnZona</span>
           </div>
           <div>
             <div class="data-row">
               <code>roylilsnake@gmail.com</code>
-              <button class="copy-btn" data-copy="roylilsnake@gmail.com"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copiar</button>
+              <button class="copy-btn" data-copy="roylilsnake@gmail.com" title="Copiar Correo"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
             </div>
             <div class="data-row">
               <code>+5359199122</code>
-              <!-- Teléfono cubano todo junto para copiar directo -->
-              <button class="copy-btn" data-copy="+5359199122"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Copiar</button>
+              <button class="copy-btn" data-copy="+5359199122" title="Copiar Teléfono"><svg viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg></button>
             </div>
-            <p class="pay-note">Búscame en la app EnZona por mi correo o mi teléfono, o escanea el QR directo desde tus archivos.</p>
+            <p class="pay-note">Búscame en EnZona por correo o teléfono, o escanea/descarga el QR directo a tus archivos.</p>
           </div>
         </div>
       </div>
@@ -439,7 +439,7 @@ footer{border-top:1px solid var(--line);background:rgba(27,6,58,.55);backdrop-fi
           <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-9.5-9A5.6 5.6 0 0 1 12 6.6 5.6 5.6 0 0 1 21.5 12C19 16.4 12 21 12 21z"/><path d="M8 12h2l1.5-3 2 5L15 12h1.5"/></svg></div>
           <div><h3>Otras formas de apoyar</h3><small>Recargas · Regalos · Desde el exterior</small></div>
         </div>
-        <p class="pay-note">¿Recarga Cubacel, un componente prestado pa' review, o estás fuera de Cuba y quieres ayudar? Escríbeme por <strong style="color:var(--neon)">WhatsApp</strong> o por <strong style="color:var(--neon)">correo</strong> y lo coordinamos directo.</p>
+        <p class="pay-note">¿Recarga Cubacel, un componente prestado pa' review, o estás fuera de Cuba y quieres ayudar? Escríbeme por <strong style="color:var(--neon)">WhatsApp</strong> o por <strong style="color:var(--neon)">Telegram</strong> y lo coordinamos directo.</p>
         <div class="mini-cta">
           <a class="btn btn-neon" style="padding:.7rem 1.1rem;font-size:.9rem" href="https://wa.me/message/F2ZSOXV2J4HAL1" target="_blank" rel="noopener">Coordinar por WhatsApp</a>
           <a class="btn btn-ghost" style="padding:.7rem 1.1rem;font-size:.9rem" href="mailto:roylilsnake@gmail.com">Escribir correo</a>
@@ -451,9 +451,9 @@ footer{border-top:1px solid var(--line);background:rgba(27,6,58,.55);backdrop-fi
     <div class="steps reveal">
       <h3>¿Cómo donar en 3 pasos?</h3>
       <ol>
-        <li>Abre <strong>Transfermóvil</strong> o <strong>EnZona</strong> en tu teléfono, o escanea los QRs con tu cámara.</li>
-        <li>Haz tu transferencia del monto que quieras — copia el dato con un clic: <strong style="color:var(--neon)">9205-1299-7821-8221</strong> o <strong style="color:var(--neon)">+5359199122</strong>. No hay mínimo, todo suma.</li>
-        <li>Envíame la captura por <strong>WhatsApp</strong> con tu nombre y saldrás en los agradecimientos del próximo estreno. <span class="heart">♥</span></li>
+        <li>Abre <strong>Transfermóvil</strong> o <strong>EnZona</strong> en tu teléfono, o escanea los QRs directamente.</li>
+        <li>Haz tu transferencia del monto que quieras — copia el dato con un toque: <strong style="color:var(--neon)">9205-1299-7821-8221</strong> o <strong style="color:var(--neon)">+5359199122</strong>. No hay mínimo, todo suma.</li>
+        <li>Envíame la captura por <strong>WhatsApp</strong> o <strong>Telegram</strong> con tu nombre y saldrás en los agradecimientos del próximo estreno. <span class="heart">♥</span></li>
       </ol>
       <p style="color:#e9dcff;font-size:.92rem;line-height:1.6;border-top:1px dashed rgba(255,255,255,.3);padding-top:1.1rem">Con tu aporte mantengo el equipo encendido, compro componentes pa' probar y sigo subiendo contenido gratis pa' la comunidad tech cubana. <strong style="color:var(--yel)">¡Gracias por mantener vivo el setup!</strong></p>
       <div class="mini-cta">
@@ -483,6 +483,13 @@ footer{border-top:1px solid var(--line);background:rgba(27,6,58,.55);backdrop-fi
       <span class="s-ico"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg></span>
       <span><b>WhatsApp</b><small>+5359199122</small></span>
     </a>
+    
+    <!-- Red Social Telegram añadida -->
+    <a class="social tg reveal" href="https://t.me/Roy_LilSnake" target="_blank" rel="noopener">
+      <span class="s-ico"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.18-1.82 6.97-3.02 8.38-3.61 3.98-1.66 4.81-1.95 5.35-1.96.12 0 .38.03.55.17.14.12.18.28.2.4.02.14.02.3 0 .46z"/></svg></span>
+      <span><b>Telegram</b><small>@Roy_LilSnake</small></span>
+    </a>
+
     <a class="social mail reveal" href="mailto:roylilsnake@gmail.com">
       <span class="s-ico"><svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13zm2.2-.3l7.8 6 7.8-6H4.2zM20 7.6l-7.4 5.7a1 1 0 0 1-1.2 0L4 7.6v10.9c0 .3.2.5.5.5h15c.3 0 .5-.2.5-.5V7.6z"/></svg></span>
       <span><b>Correo</b><small>roylilsnake@gmail.com</small></span>
@@ -515,31 +522,20 @@ footer{border-top:1px solid var(--line);background:rgba(27,6,58,.55);backdrop-fi
   <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.13.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29z"/></svg>
 </a>
 
-<!-- Mensaje Toast de notificación (Copiado con éxito) -->
+<!-- Toast al copiar -->
 <div id="toast" role="status">¡Copiado!</div>
 
-<!-- Librería de QR como respaldo para EnZona -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
-<!-- =========================================================================
-     LÓGICA JAVASCRIPT EXPLICADA PASO A PASO
-     ========================================================================= -->
 <script>
-/* -------------------------------------------------------------------------
-   1. FONDO ANIMADO DE ONDAS EN CANVAS (#waves)
-   Dibuja líneas curvas dinámicas en el fondo emulando el logo de D0A SetUp.
-   ------------------------------------------------------------------------- */
+/* 1. ONDAS CANVAS */
 const cv = document.getElementById('waves');
 const cx = cv.getContext('2d');
 let W, H, T = 0;
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Redimensionar el lienzo al tamaño exacto de la pantalla
 function resize(){ W = cv.width = innerWidth; H = cv.height = innerHeight; }
 addEventListener('resize', resize); 
 resize();
 
-// Función matemática que crea las ondas neón
 function ribbon(x, y, rot, scale, lines, len, speed){
   cx.save(); cx.translate(x, y); cx.rotate(rot); cx.scale(scale, scale);
   for(let j = 0; j < lines; j++){
@@ -558,7 +554,6 @@ function ribbon(x, y, rot, scale, lines, len, speed){
   cx.restore();
 }
 
-// Renderizado constante del lienzo
 function draw(){
   cx.clearRect(0, 0, W, H);
   ribbon(W * 0.10, H * 0.16, -0.55, 1, 26, W * 0.55, 1);
@@ -570,11 +565,7 @@ function draw(){
 function loop(){ T += 0.006; draw(); if(!reduced) requestAnimationFrame(loop); }
 loop();
 
-/* -------------------------------------------------------------------------
-   2. MENÚ MÓVIL (MEJORADO)
-   Abre/Cierra el menú en pantallas pequeñas y lo cierra automáticamente 
-   si haces clic fuera de él.
-   ------------------------------------------------------------------------- */
+/* 2. MENÚ MÓVIL */
 const burger = document.getElementById('burger');
 const menu = document.getElementById('menu');
 
@@ -583,44 +574,15 @@ burger.addEventListener('click', (e) => {
   menu.classList.toggle('open');
 });
 
-// Cerrar el menú al hacer clic en un enlace
 menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
 
-// MEJORA: Cerrar menú si el usuario toca en cualquier otra parte fuera de la barra
 document.addEventListener('click', (e) => {
   if (menu.classList.contains('open') && !menu.contains(e.target) && !burger.contains(e.target)) {
     menu.classList.remove('open');
   }
 });
 
-/* -------------------------------------------------------------------------
-   3. QR RESPALDO PARA ENZONA
-   Si el archivo "qr-enzona.png" no existe en la carpeta raíz, este código 
-   genera automáticamente un código QR con tus datos reales de EnZona.
-   ------------------------------------------------------------------------- */
-function activarQRRespaldo(){
-  const img = document.getElementById('qrImg');
-  const gen = document.getElementById('qrGen');
-  img.style.display = 'none';
-  gen.style.display = 'block';
-  if(window.QRCode){
-    gen.innerHTML = '';
-    new QRCode(gen, {
-      text: 'ENZONA | roylilsnake@gmail.com | +5359199122',
-      width: 152, height: 152,
-      colorDark: '#1b063a', colorLight: '#ffffff',
-      correctLevel: QRCode.CorrectLevel.M
-    });
-  } else {
-    gen.innerHTML = '<div style="width:152px;height:152px;display:grid;place-items:center;color:#1b063a;font-weight:800;font-size:.75rem;text-align:center;padding:8px">Usa el correo o el teléfono de al lado pa\' pagar por EnZona</div>';
-  }
-}
-
-/* -------------------------------------------------------------------------
-   4. SISTEMA DE COPIADO AL PORTAPAPELES (CLIPBOARD)
-   Permite que al hacer clic en los botones "Copiar", se guarde el dato listo
-   para pegar directamente en Transfermóvil o EnZona sin espacios ni guiones.
-   ------------------------------------------------------------------------- */
+/* 3. SISTEMA DE COPIADO */
 const toast = document.getElementById('toast');
 let toastTimer;
 
@@ -637,7 +599,6 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
     try { 
       await navigator.clipboard.writeText(txt); 
     } catch(e){
-      // Fallback para navegadores antiguos
       const ta = document.createElement('textarea');
       ta.value = txt; document.body.appendChild(ta); ta.select();
       document.execCommand('copy'); ta.remove();
@@ -646,10 +607,7 @@ document.querySelectorAll('.copy-btn').forEach(btn => {
   });
 });
 
-/* -------------------------------------------------------------------------
-   5. ANIMACIÓN DE ENTRADA SUAVE AL HACER SCROLL (INTERSECTION OBSERVER)
-   Hace que los elementos vayan apareciendo suavemente según el usuario baja en la web.
-   ------------------------------------------------------------------------- */
+/* 4. REVELACIÓN AL SCROLL */
 const io = new IntersectionObserver(entries => {
   entries.forEach(en => { 
     if(en.isIntersecting){ 
@@ -663,4 +621,3 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
-
